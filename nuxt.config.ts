@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 
   // Alternative: Use app.head to inject Bunny Fonts directly
   app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/dj-docs/' : '/',
     head: {
       link: [
         {

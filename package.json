@@ -2,7 +2,9 @@
   "name": "DJ",
   "scripts": {
     "dev": "nuxt dev --extends docus",
-    "build": "nuxt build --extends docus"
+    "build": "nuxt build --extends docus",
+    "generate": "nuxt generate --extends docus",
+    "preview": "nuxt preview"
   },
   "dependencies": {
     "docus": "latest",
