@@ -23,11 +23,11 @@ export default defineNuxtConfig({
   app: {
     baseURL: process.env.NODE_ENV === 'production' ? '/dj-docs/' : '/',
     head: {
-      favicon: {
-        rel: 'icon',
-        href: '/favicon.ico',
-      },
       link: [
+        {
+          rel: 'icon',
+          href: '/favicon.ico',
+        },
         {
           rel: 'stylesheet',
           href: 'https://fonts.bunny.net/css?family=dm-sans:400,500,600,700|dm-mono:400,500&display=swap',
