@@ -31,12 +31,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-  image: {
-    // 使用静态提供者，禁用 IPX 的自动图片优化
-    providers: {
-      ipx: false,
-    },
-  },
   // 配置 Nitro 以正确处理 baseURL 下的静态资源
   nitro: {
     publicAssets: [
