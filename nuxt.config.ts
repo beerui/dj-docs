@@ -26,7 +26,7 @@ export default defineNuxtConfig({
       link: [
         {
           rel: 'shortcut icon',
-          href: '/favicon.ico',
+          href: process.env.NODE_ENV === 'production' ? '/dj-docs/favicon.ico' : '/favicon.ico',
           type: 'image/x-icon',
         },
         {
