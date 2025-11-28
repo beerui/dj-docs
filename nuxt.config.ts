@@ -37,9 +37,10 @@ export default defineNuxtConfig({
     },
   },
 
-  // 配置图片处理，避免 baseURL 重复
+  // 禁用图片优化，避免 _ipx 路径问题
   image: {
     dir: 'public',
+    provider: 'none', // 禁用图片优化
   },
   // 配置 Nitro 以正确处理 baseURL 下的静态资源
   nitro: {
