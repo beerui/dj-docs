@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 
   // Alternative: Use app.head to inject Bunny Fonts directly
   app: {
+    baseURL: process.env.NODE_ENV === 'production' ? '/dj-docs/' : '/',
     head: {
       link: [
         {
@@ -29,5 +30,16 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+
+  // 配置 Nitro 以正确处理 baseURL 下的静态资源
+  nitro: {
+    publicAssets: [
+      {
+        baseURL: process.env.NODE_ENV === 'production' ? '/dj-docs/' : '/',
+        dir: 'public',
+        maxAge: 60 * 60 * 24 * 7, // 7 days
+      },
+    ],
   },
 })
