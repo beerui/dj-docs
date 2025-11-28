@@ -41,8 +41,4 @@ export default defineNuxtConfig({
       },
     ],
   },
-  // 禁用 IPX 图片处理，使用静态提供者
-  image: {
-    provider: 'static',
-  },
 })
