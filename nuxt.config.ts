@@ -25,8 +25,9 @@ export default defineNuxtConfig({
     head: {
       link: [
         {
-          rel: 'icon',
+          rel: 'shortcut icon',
           href: '/favicon.ico',
+          type: 'image/x-icon',
         },
         {
           rel: 'stylesheet',
@@ -34,6 +35,11 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+
+  // 配置图片处理，避免 baseURL 重复
+  image: {
+    dir: 'public',
   },
   // 配置 Nitro 以正确处理 baseURL 下的静态资源
   nitro: {
